@@ -25,6 +25,8 @@ class Customer(models.Model):
         return self.cus_fname + ' ' + self.cus_lname
 
 
+
+
 class Aircraft(models.Model):
     ac_number = models.CharField(primary_key=True, max_length=5)
     mod_code = models.ForeignKey('Model', models.DO_NOTHING, db_column='mod_code', blank=True, null=True)

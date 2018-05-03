@@ -1,0 +1,110 @@
+{% extends "airline/base.html"  %}
+{% block head_title %}
+    {{ page_title }} | {{ block.super }}
+{% endblock head_title %}
+
+
+{% block content %}
+    <h3>{{ title1 }} </h3>
+    <table class="table table-hover bg-white">
+        <thead>
+        <tr>
+            <th scope="col">Customer Code</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Initial</th>
+            <th scope="col">Area Code</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Balance</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for object in cus_list %}
+            <tr>
+                <td>{{ object.cus_code }}</td>
+                <td>{{ object.cus_fname }}</td>
+                <td>{{ object.cus_lname }}</td>
+                <td>{{ object.cus_initial }}</td>
+                <td>{{ object.cus_areacode }}</td>
+                <td>{{ object.cus_phone }}</td>
+                <td>{{ object.cus_balance }}</td>
+                <td>Edit</td>
+                <td>Delete</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <h3>{{ title2 }} </h3>
+    <table class="table table-hover bg-white">
+        <thead>
+        <tr>
+            <th scope="col">Customer Code</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Initial</th>
+            <th scope="col">Area Code</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Balance</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for object in cus_list %}
+            <tr>
+                <td>{{ object.cus_code }}</td>
+                <td>{{ object.cus_fname }}</td>
+                <td>{{ object.cus_lname }}</td>
+                <td>{{ object.cus_initial }}</td>
+                <td>{{ object.cus_areacode }}</td>
+                <td>{{ object.cus_phone }}</td>
+                <td>{{ object.cus_balance }}</td>
+                <td>Edit</td>
+                <td>Delete</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+ <h3>{{ title3 }} </h3>
+    <table class="table table-hover bg-white">
+        <thead>
+        <tr>
+            <th scope="col">trip code</th>
+            <th scope="col">Customer code</th>
+            <th scope="col">charter date</th>
+            <th scope="col">destination</th>
+            <th scope="col">AC Number</th>
+            <th scope="col">wait</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for object3 in chart_list3 %}
+            <tr>
+                <td>{{ object3.char_trip }}</td>
+                <td>{{ object3.cus_code }}</td>
+                <td>{{ object3.char_date }}</td>
+                <td>{{ object3.char_destination }}</td>
+                <td>{{ object3.ac_number }}</td>
+                <td>{{ object3.char_hours_wait }}</td>
+                <td>Edit</td>
+                <td>Delete</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+
+{% endblock content %}
+
+
+
+
+
+
+
